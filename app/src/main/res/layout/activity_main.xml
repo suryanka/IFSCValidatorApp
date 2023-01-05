@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IFSC Code Validator"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:padding="20dp"
+        tools:ignore="HardcodedText"
+        android:id="@+id/idTVIfsc"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVIfsc"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#2196F3"
+        android:hint="Enter IFSC Code"
+        android:padding="20dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:importantForAutofill="no"
+        tools:ignore="HardcodedText"
+        android:id="@+id/idETIfsc"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idETIfsc"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:id="@+id/idRLBankDetailsButton">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Get Bank Details"
+            android:id="@+id/Button"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/idRLInfo"
+        android:layout_below="@id/idRLBankDetailsButton"
+        android:layout_marginTop="35dp"
+        android:gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/idTVBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Bank Name:"
+                android:textColor="#4CAF50"
+                android:textSize="15dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/BankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Bank Name"
+                android:textColor="#4CAF50"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankName"
+            android:id="@+id/idTVBankBranch"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch Name"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/BranchName"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankBranch"
+            android:id="@+id/idTVBankAddress"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address Details"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/AddressDetails"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankAddress"
+            android:id="@+id/idTVBankMICR"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MICR Code:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000000"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/MICRCode"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankMICR"
+            android:id="@+id/idTVBankCity"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City Name"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/CityName"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankCity"
+            android:id="@+id/idTVBankState"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State Name"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/StateName"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_below="@+id/idTVBankState"
+            android:id="@+id/idTVContact"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact:"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000000000"
+                android:textSize="15dp"
+                android:textColor="#4CAF50"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:id="@+id/Contact"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
